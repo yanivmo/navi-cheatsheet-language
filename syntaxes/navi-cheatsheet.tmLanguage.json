@@ -1,0 +1,91 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "Navi Cheatsheet",
+    "scopeName": "source.navi-cheatsheet",
+    "patterns": [
+        { "include": "#initial_context" }
+    ],
+    "repository": {
+        "initial_context": {
+            "patterns": [
+                { "include": "#cheatsheet" },
+                { "include": "#comment" },
+                { "include": "#all_the_rest"}
+            ]
+        },
+        "cheatsheet": {
+            "name": "meta.block.namespace.navi-cheatsheet",
+            "begin": "^(%)\\s*(.*\\S)\\s*$",
+            "while": "^[^%].*",
+            "beginCaptures": {
+                "0": { "name": "meta.head.namespace.navi-cheatsheet" },
+                "1": { "name": "keyword.control" },
+                "2": { "name": "meta.block.tags.navi-cheatsheet" }
+            },
+            "whileCaptures": {
+                "0": { 
+                    "name": "meta.body.namespace.navi-cheatsheet",
+                    "patterns": [
+                        { "include": "#command_description" },
+                        { "include": "#variable_definition" },
+                        { "include": "#import" },
+                        { "include": "#comment" },
+                        { "include": "#shell_command" }
+                    ]
+                }
+            }
+        },
+        "command_description": {
+            "name": "string.description.navi-cheatsheet",
+            "match": "^#.*"
+        },
+        "variable_definition": {
+            "name": "meta.block.variable.navi-cheatsheet",
+            "match": "^(\\$)\\s*(\\w+)\\s*:(.*)",
+            "captures": {
+                "1": { "name": "keyword.control.variable.navi-cheatsheet" },
+                "2": { "name": "variable.parameter.navi-cheatsheet" },
+                "3": { "patterns": [{ "include": "#shell_command" }] }
+            }
+        },
+        "import": {
+            "name": "meta.block.import.navi-cheatsheet",
+            "match": "^(@).*",
+            "captures": {
+                "1": { "name": "keyword.control.import.navi-cheatsheet" }
+            }
+        },
+        "comment": {
+            "name": "comment.line.navi-cheatsheet",
+            "match": "^\\;.*"
+        },
+        "shell_command": {
+            "name": "meta.embedded.block.shellscript.navi-cheatsheet",
+            "match": ".*",
+            "captures": {
+                "0": {
+                    "patterns": [
+                        { "include": "#variable_reference" },
+                        { "include": "#command_flag" }
+                    ]
+                }
+            }
+        },
+        "variable_reference": {
+            "match": "(<)(\\w+)(>)",
+            "captures": {
+                "1": { "name": "punctuation.section.angle-brackets.begin.navi-cheatsheet" },
+                "2": { "name": "variable.parameter.navi-cheatsheet" },
+                "3": { "name": "punctuation.section.angle-brackets.end.navi-cheatsheet" }
+            }
+        },
+        "command_flag": {
+            "name": "constant.other.option.navi-cheatsheet",
+            "match": "\\s\\-{1,2}[\\w\\-]+"
+        },
+        "all_the_rest": {
+            "name": "meta.unknown",
+            "match": ".*"
+        }
+    }
+}

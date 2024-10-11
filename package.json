@@ -1,0 +1,27 @@
+{
+  "name": "navi-cheatsheet-language",
+  "displayName": "Navi Cheatsheet Language Support",
+  "description": "Syntax highlighting for navi cheatsheet files.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.94.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "navi-cheatsheet",
+      "aliases": ["Navi Cheatsheet", "navi-cheatsheet"],
+      "extensions": [".cheat"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [
+      {
+        "language": "navi-cheatsheet",
+        "scopeName": "source.navi-cheatsheet",
+        "path": "./syntaxes/navi-cheatsheet.tmLanguage.json"
+      }
+    ]
+  }
+}
