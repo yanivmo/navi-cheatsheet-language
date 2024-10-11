@@ -2,7 +2,11 @@
   "name": "navi-cheatsheet-language",
   "displayName": "Navi Cheatsheet Language Support",
   "description": "Syntax highlighting for navi cheatsheet files.",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yanivmo/navi-cheatsheet-language.git"
+  },
   "engines": {
     "vscode": "^1.94.0"
   },
