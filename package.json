@@ -2,7 +2,9 @@
   "name": "navi-cheatsheet-language",
   "displayName": "Navi Cheatsheet Language Support",
   "description": "Syntax highlighting for navi cheatsheet files.",
+  "publisher": "yanivmo",
   "version": "1.0.0",
+  "license": "MIT",
   "icon": "images/navi-icon-512.png",
   "repository": {
     "type": "git",
@@ -13,6 +15,12 @@
   },
   "categories": [
     "Programming Languages"
+  ],
+  "keywords": [
+    "navi",
+    "cheatsheet",
+    "cheat",
+    "syntax highlighting"
   ],
   "contributes": {
     "languages": [{
