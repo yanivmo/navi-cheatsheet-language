@@ -3,7 +3,7 @@
   "displayName": "Navi Cheatsheet Language Support",
   "description": "Syntax highlighting for navi cheatsheet files.",
   "publisher": "yanivmo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "icon": "images/navi-icon-512.png",
   "repository": {
@@ -23,12 +23,19 @@
     "syntax highlighting"
   ],
   "contributes": {
-    "languages": [{
-      "id": "navi-cheatsheet",
-      "aliases": ["Navi Cheatsheet", "navi-cheatsheet"],
-      "extensions": [".cheat"],
-      "configuration": "./language-configuration.json"
-    }],
+    "languages": [
+      {
+        "id": "navi-cheatsheet",
+        "aliases": [
+          "Navi Cheatsheet",
+          "navi-cheatsheet"
+        ],
+        "extensions": [
+          ".cheat"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
     "grammars": [
       {
         "language": "navi-cheatsheet",
