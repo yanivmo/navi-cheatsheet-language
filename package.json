@@ -3,6 +3,7 @@
   "displayName": "Navi Cheatsheet Language Support",
   "description": "Syntax highlighting for navi cheatsheet files.",
   "version": "1.0.0",
+  "icon": "images/navi-icon-512.png",
   "repository": {
     "type": "git",
     "url": "https://github.com/yanivmo/navi-cheatsheet-language.git"
