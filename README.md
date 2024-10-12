@@ -7,4 +7,6 @@ Visual Studio syntax highlighting for [navi](https://github.com/denisidoro/navi)
 
 ![Syntax highlighting](images/syntax-highlighting-example.png)
 
-Navi documentaion: https://github.com/denisidoro/navi
+- Navi documentaion: https://github.com/denisidoro/navi
+- Navi idea and development by @denisidoro
+- Winged navi original logo design by @denisidoro
